@@ -7,3 +7,9 @@ DB_PASSWORD=
 DB_NAME=projeto-graphql
 
 AP_AUTH_SECRET=choose a secret
+
+#.env.db
+MYSQL_ROOT_PASSWORD=
+MYSQL_DATABASE=projeto-graphql
+MYSQL_USER=
+MYSQL_PASSWORD=
