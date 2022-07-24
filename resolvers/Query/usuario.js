@@ -11,9 +11,14 @@ module.exports = {
             throw new Error('Usuário/Senha inválido')
         }
 
-        const saoIguais = bcrypt.compareSync(dados.senha, )
+        const saoIguais = bcrypt.compareSync(dados.senha, usuario.senha)
+        if(!saoIguais) {
+            throw new Error('Usuário/Senha inválido')
+        }
+
+        return getUsuarioLogado(usuario)
     },
-    usuarios() {
+    usuarios(obj, args, context) {
         return db('usuarios')
     },
     usuario(_, { filtro }) {
